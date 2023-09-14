@@ -2,10 +2,11 @@
   "name": "node-complatible-with-deno-and-bun",
   "license": "MIT",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
-    "preinstall": "bun scripts/preinstall.js",
+    "preinstall": "node scripts/preinstall.js",
     "lint": "deno lint",
     "format": "deno fmt",
     "build": "npm run build:bar && npm run build:foo",
