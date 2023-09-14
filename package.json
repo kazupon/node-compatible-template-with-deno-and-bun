@@ -8,13 +8,13 @@
     "preinstall": "bun scripts/preinstall.js",
     "lint": "deno lint",
     "format": "deno fmt",
-    "build": "bun run build:bar && bun run build:foo",
-    "build:bar": "cd packages/bar && bun run build",
-    "build:foo": "cd packages/foo && bun run build",
-    "dev:foo": "cd packages/foo && bun run dev",
-    "test": "bun run test:bar && bun run test:foo",
-    "test:bar": "cd packages/bar && bun run test",
-    "test:foo": "cd packages/foo && bun run test"
+    "build": "npm run build:bar && npm run build:foo",
+    "build:bar": "npm run -w bar build",
+    "build:foo": "npm run -w foo build",
+    "dev:foo": "npm run -w foo dev",
+    "test": "npm run test:bar && npm run test:foo",
+    "test:bar": "npm run -w bar test",
+    "test:foo": "npm run -w foo test"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,md,json,jsonc}": [
