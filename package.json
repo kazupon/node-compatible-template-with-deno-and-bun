@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "git config --local core.hooksPath .githooks",
+    "preinstall": "bun scripts/preinstall.js",
     "build": "bun run build:bar && bun run build:foo",
     "lint": "deno lint",
     "format": "deno fmt",
