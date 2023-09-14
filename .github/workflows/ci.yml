@@ -46,6 +46,9 @@ jobs:
       - name: Setup bun
         uses: oven-sh/setup-bun@v1
 
+      - name: Enable corepack
+        run: corepack enable
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
