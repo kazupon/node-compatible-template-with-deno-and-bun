@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup deno
-      - uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x # Run with latest stable Deno.
 
@@ -35,6 +35,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
+        node: [18.x]
 
     runs-on: ${{ matrix.os }}
 
