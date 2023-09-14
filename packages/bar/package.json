@@ -1,0 +1,14 @@
+{
+  "name": "bar",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "@intlify/shared": "^9.4.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

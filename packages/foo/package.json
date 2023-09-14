@@ -1,0 +1,14 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "unbuild",
+    "dev": "bun index.ts"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@intlify/core": "^9.4.0"
+  },
+  "license": "MIT"
+}

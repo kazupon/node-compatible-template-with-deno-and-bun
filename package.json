@@ -1,0 +1,32 @@
+{
+  "name": "node-complatible-with-deno-bun",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "git config --local core.hooksPath .githooks",
+    "build": "bun run build:bar && bun run build:foo",
+    "lint": "deno lint",
+    "format": "deno fmt",
+    "build:bar": "cd packages/bar && bun run build",
+    "build:foo": "cd packages/foo && bun run build",
+    "dev:foo": "cd packages/foo && bun run dev"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,md,json,jsonc}": [
+      "deno fmt"
+    ],
+    "*.{js,ts,jsx,tsx}": [
+      "deno lint"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "lint-staged": "^14.0.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0"
+  }
+}
